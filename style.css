@@ -6,48 +6,8 @@
     }
 }
 
-@import url("https://fonts.googleapis.com/css?family=Gelasio&display=swap");
-
 * {
     box-sizing: border-box;
-}
-
-body,
-html {
-    overflow-x: hidden;
-}
-
-.bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    padding: 25px 0;
-
-    background-color: #e74c3c;
-    color: white;
-
-    font-family: Gelasio;
-    font-size: 18px;
-}
-
-.bar_content {
-    display: block; /* Important to give the content a width */
-
-    width: 100%;
-    transform: translateX(100%); /* Animation start out of the screen */
-
-    /* Add the animation */
-    animation: move 30s linear infinite;
-    /* infinite make reapeat the animation indefinitely */
-}
-
-/* Create the animation */
-@keyframes move {
-    to {
-        transform: translateX(-100%);
-    }
 }
 
 body {
@@ -62,19 +22,16 @@ body {
 }
 
 header {
-    /* box-sizing: border-box; */
-
     display: flex;
     flex-direction: column;
-    /* height: 100px; */
     background: linear-gradient(rgb(45, 253, 149), rgb(40, 231, 235));
     color: white;
     box-shadow: 0px 5px 5px rgb(33, 173, 175);
     margin-bottom: 3rem;
+    overflow-x: hidden;
 }
 
 .main-header {
-    /* height: 75%; */
     box-sizing: border-box;
     width: 100%;
     display: flex;
@@ -92,10 +49,9 @@ header {
     width: 50px;
 }
 
-/* .logo span {
-    align-self: center;
-    line-height: 50px;
-} */
+.main-header .logo span {
+    font-size: 1.5rem;
+}
 
 .main-header .navigation {
     display: flex;
@@ -109,14 +65,12 @@ header {
 
 .main-header .navigation li {
     list-style-type: none;
-    margin-left: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .sub-header {
     width: 100%;
-    /* height: 30px; */
-    /* display: flex;
-    align-items: center; */
     border: 3px double white;
     box-sizing: border-box;
 }
@@ -127,7 +81,8 @@ header {
     transform: translateX(100%);
     animation: move 15s linear infinite;
     line-height: 20px;
-    /* text-overflow: ellipsis; */
+    /* overflow-x: auto; */
+    white-space: nowrap;
 }
 
 main {
@@ -210,4 +165,44 @@ footer .icon {
     display: flex;
     justify-content: space-around;
     width: 20%;
+}
+
+@media screen and (max-width: 900px) {
+    /* Rédigez vos propriétés CSS ici */
+
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .main-header .navigation {
+        align-self: center;
+    }
+
+    .main-header .navigation ul {
+        padding: 0rem;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .card .description {
+        width: 100%;
+    }
+
+    main .card-thai {
+        flex-direction: column-reverse;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    footer .icon {
+        width: 50%;
+    }
 }
