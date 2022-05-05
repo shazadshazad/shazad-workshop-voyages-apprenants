@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Kufam:wght@400;500;700&display=swap");
+
+@keyframes move {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Gelasio&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 25px 0;
+
+    background-color: #e74c3c;
+    color: white;
+
+    font-family: Gelasio;
+    font-size: 18px;
+}
+
+.bar_content {
+    display: block; /* Important to give the content a width */
+
+    width: 100%;
+    transform: translateX(100%); /* Animation start out of the screen */
+
+    /* Add the animation */
+    animation: move 30s linear infinite;
+    /* infinite make reapeat the animation indefinitely */
+}
+
+/* Create the animation */
+@keyframes move {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kufam", cursive;
+    text-shadow: 1px 1px 2px #000000a6;
+}
+
+.container {
+    width: 100%;
+}
+
+header {
+    /* box-sizing: border-box; */
+
+    display: flex;
+    flex-direction: column;
+    /* height: 100px; */
+    background: linear-gradient(rgb(45, 253, 149), rgb(40, 231, 235));
+    color: white;
+    box-shadow: 0px 5px 5px rgb(33, 173, 175);
+    margin-bottom: 3rem;
+}
+
+.main-header {
+    /* height: 75%; */
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.main-header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.main-header .logo img {
+    height: 50px;
+    width: 50px;
+}
+
+/* .logo span {
+    align-self: center;
+    line-height: 50px;
+} */
+
+.main-header .navigation {
+    display: flex;
+    align-items: center;
+}
+
+.main-header .navigation ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-header .navigation li {
+    list-style-type: none;
+    margin-left: 2rem;
+}
+
+.sub-header {
+    width: 100%;
+    /* height: 30px; */
+    /* display: flex;
+    align-items: center; */
+    border: 3px double white;
+    box-sizing: border-box;
+}
+
+.sub-header p {
+    width: 100%;
+    box-sizing: border-box;
+    transform: translateX(100%);
+    animation: move 15s linear infinite;
+    line-height: 20px;
+    /* text-overflow: ellipsis; */
+}
+
+main {
+    width: 75%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+main .card {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+main .card-japan {
+    background: linear-gradient(rgb(86, 166, 241), rgb(191, 129, 148));
+}
+
+main .card-thai {
+    background: linear-gradient(rgb(70, 134, 195), rgb(97, 227, 194));
+}
+
+main .card-india {
+    background: linear-gradient(rgb(92, 144, 181), rgb(226, 132, 23));
+}
+
+main .card .card-image {
+    display: flex;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+}
+
+main .card .card-image img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+main .card .description {
+    color: white;
+    width: 45%;
+    text-align: end;
+}
+
+main .card .description h1 {
+    font-size: 1.5rem;
+}
+
+main .card .description-japan {
+    text-align: start;
+}
+
+main .card .description-thai {
+    text-align: center;
+}
+
+main .card .description-india {
+    text-align: end;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 90px;
+    width: 100%;
+    background: linear-gradient(rgb(34, 193, 195), rgb(45, 253, 149));
+    box-shadow: 0px -5px 5px rgb(33, 173, 175);
+    padding-left: 1rem;
+    box-sizing: border-box;
+    margin-top: 3rem;
+}
+
+footer .icon {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
