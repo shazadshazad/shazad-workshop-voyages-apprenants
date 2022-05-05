@@ -81,7 +81,6 @@ header {
     transform: translateX(100%);
     animation: move 15s linear infinite;
     line-height: 20px;
-    /* overflow-x: auto; */
     white-space: nowrap;
 }
 
@@ -168,8 +167,6 @@ footer .icon {
 }
 
 @media screen and (max-width: 900px) {
-    /* Rédigez vos propriétés CSS ici */
-
     .main-header {
         flex-direction: column;
         align-items: center;
